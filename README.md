@@ -1,2 +1,1 @@
 Answers to CentralArkansasCodeKata/TDDStringCalculator
-=============
