@@ -28,11 +28,27 @@ describe('Add method', function() {
     });
 
     it ('supports different delimeters that you specify in the beginning of the string: “//[delimiter]\\n[numbers…]”', function() {
-        expect(add(';\n1;2')).toEqual(3);
-        expect(add('|\n1|2|3')).toEqual(6);
+        expect(add('//;\n1;2')).toEqual(3);
+        expect(add('//|\n1|2|3')).toEqual(6);
+    });
+
+    it('supports delimeters of any length', function() {
+        expect(add('//#;!\n2#;!5#;!2')).toEqual(9);
     });
 
     it('throws an exception if any of the numbers are negative with message: "negatives not allowed " + numbers', function() {
         expect(function() {add('1,-4, 6'); }).toThrow(new Error('negatives not allowed -4'));
     });
+
+    it('should ignore numbers bigger than 1000', function() {
+        expect(add('2,1001,2')).toEqual(4);
+    });
+
+
+
+    /*
+    it('should allow multiple delimters like "//[delim1][delim2]\\n"', function() {
+        expect(add('//[;][#]\n1,2,3')).toEqual(6);
+    });
+    */
 });
