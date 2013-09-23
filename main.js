@@ -1,0 +1,1 @@
+var tsc = require('tdd-str-calc');

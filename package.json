@@ -1,0 +1,19 @@
+{
+  "name": "tdd-string-calculator",
+  "version": "1.0.0",
+  "description": "A code-kata",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kledk/TDDStringCalculator.git"
+  },
+  "author": "kledk",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/kledk/TDDStringCalculator/issues"
+  },
+  "dependencies": {}
+}

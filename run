@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Running now"
+nodemon --exec "jasmine-node" spec/tdd-str-calcSpec.js
